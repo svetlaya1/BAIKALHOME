@@ -1,0 +1,22 @@
+body {
+    background-image: url(../images/backgraund-gradient.jpg);
+    background-size: cover;
+}
+
+main {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 200px;
+}
+
+.card {
+    position: relative;
+    width: 400px;
+    height: 200px;
+    border-radius: 10%;
+    &__goloustnoe {
+        background-image: url(../images/card-goloustnoe.jpg);
+        background-size: auto;
+    }
+}
