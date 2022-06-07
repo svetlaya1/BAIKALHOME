@@ -1,22 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito:ital,wght@0,400;1,600&display=swap');
+
+
+$Montserrat: 'Montserrat', sans-serif;
+$Nunito: 'Nunito', sans-serif;
+
+$white: #FFFFFF;
+
 body {
-    background-image: url(../images/backgraund-gradient.jpg);
+    background-image: url(../images/main/backgraund-gradient.jpg);
     background-size: cover;
+    font-family: $Nunito;
 }
 
 main {
     display: flex;
+    gap: 4%;
     align-items: center;
     justify-content: center;
-    margin-top: 200px;
+    margin-top: 100px;
+}
+
+a {
+    text-decoration: none;
+    text-align: center;
 }
 
 .card {
-    position: relative;
-    width: 400px;
-    height: 200px;
-    border-radius: 10%;
+    width: 320px;
+    height: 240px;
+    border-radius: 15%;
+    background-size: 320px 240px;
+    background-position: center;
+    transition: .3s;
+    &:hover {
+        transform: scale(1.05);
+    }
+    &__listvyanka {
+        background-image: url(../images/main/card-listvyanka.jpg);
+    }
+    &__trail {
+        background-image: url(../images/main/arrow-trail.png);
+        background-size: 265px 179px;
+        background-repeat: no-repeat;
+        position: relative;
+    }
     &__goloustnoe {
-        background-image: url(../images/card-goloustnoe.jpg);
-        background-size: auto;
+        background-image: url(../images/main/card-goloustnoe.jpg);
+    }
+    &__text {
+        font-size: 24px;
+        font-weight: 600;
+        font-style: italic;
+        line-height: 1.5;
+        letter-spacing: 1.2px;
+        color: #FFFFFF;
+        &_listvyanka {
+            padding-top: 23px;
+        }
+        &_trail {
+            position: absolute;
+            top: -76px;
+            padding-top: 14px;
+            color: #7B3F00;
+            font-size: 23px;
+            font-style: normal;
+        }
+        &_goloustnoe {
+            padding-top: 11px;
+        }
     }
 }
