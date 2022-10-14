@@ -1,81 +1,277 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600&family=Nunito:ital,wght@0,400;1,600&display=swap");
 body {
-  background-image: url(../images/main/backgraund-gradient.jpg);
-  background-size: cover;
   font-family: "Nunito", sans-serif;
+  overflow-x: hidden;
 }
 
-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
+.container {
+  max-width: 1140px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.header {
+  position: -webkit-sticky;
+  position: sticky;
+  background-color: white;
+  top: 0;
+  z-index: 1;
+}
+@media (max-width: 1024px) {
+  .header {
+    display: flex;
+    justify-content: center;
+  }
+}
+.header__container {
   display: flex;
-  gap: 4%;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  margin-top: 100px;
+  justify-content: space-between;
 }
-
-a {
+@media (max-width: 1024px) {
+  .header__container {
+    width: 860px;
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+.header__logo {
+  display: flex;
+  align-items: center;
+}
+.header__logo img {
+  width: 50px;
+  height: 50px;
+  margin: 0 15px 0 0;
+}
+@media (max-width: 640px) {
+  .header__logo img {
+    width: 30px;
+    height: 30px;
+  }
+}
+.header__logo h3 {
+  font-size: 22px;
+}
+@media (max-width: 640px) {
+  .header__logo h3 {
+    font-size: 18px;
+  }
+}
+@media (max-width: 540px) {
+  .header__logo h3 {
+    font-size: 14px;
+  }
+}
+@media (max-width: 480px) {
+  .header__logo h3 {
+    font-size: 10px;
+  }
+}
+.header__tel {
   text-decoration: none;
-  text-align: center;
+  transition: 0.3s;
+  font-size: 24px;
+  color: black;
+}
+.header__tel:hover {
+  color: #B8860B;
+}
+@media (max-width: 640px) {
+  .header__tel {
+    font-size: 18px;
+  }
+}
+@media (max-width: 540px) {
+  .header__tel {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+@media (max-width: 480px) {
+  .header__tel {
+    font-size: 12px;
+  }
 }
 
-.card {
-  width: 320px;
-  height: 240px;
-  border-radius: 15%;
-  background-size: 320px 240px;
-  background-position: center;
-  -webkit-transition: .3s;
-  transition: .3s;
+.socials {
+  margin-right: 20px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+@media (max-width: 540px) {
+  .socials {
+    gap: 8px;
+  }
 }
 
-.card:hover {
-  -webkit-transform: scale(1.05);
-          transform: scale(1.05);
+.button-socials {
+  border: none;
+  background: none;
+}
+.button-socials img {
+  width: 30px;
+}
+@media (max-width: 640px) {
+  .button-socials img {
+    width: 25px;
+  }
 }
 
-.card__listvyanka {
-  background-image: url(../images/main/card-listvyanka.jpg);
+.button-socials {
+  border: none;
+  background: none;
+  width: 30px;
 }
 
-.card__trail {
-  background-image: url(../images/main/arrow-trail.png);
-  background-size: 265px 179px;
-  background-repeat: no-repeat;
+.main__map {
   position: relative;
 }
-
-.card__goloustnoe {
-  background-image: url(../images/main/card-goloustnoe.jpg);
+@media (max-width: 1024px) {
+  .main__map {
+    display: flex;
+    justify-content: center;
+  }
 }
-
-.card__text {
-  font-size: 24px;
-  font-weight: 600;
-  font-style: italic;
-  line-height: 1.5;
-  letter-spacing: 1.2px;
-  color: #FFFFFF;
+@media (max-width: 1024px) {
+  .main__map img {
+    width: 860px;
+  }
 }
-
-.card__text_listvyanka {
-  padding-top: 23px;
+@media (max-width: 640px) {
+  .main__map img {
+    width: 760px;
+  }
 }
-
-.card__text_trail {
+@media (max-width: 540px) {
+  .main__map img {
+    position: absolute;
+    left: -182px;
+  }
+}
+@media (max-width: 480px) {
+  .main__map img {
+    position: absolute;
+    left: -161px;
+    width: 660px;
+  }
+}
+@media (max-width: 400px) {
+  .main__map img {
+    width: 593px;
+  }
+}
+.main__location {
   position: absolute;
-  top: -76px;
-  padding-top: 14px;
-  color: #7B3F00;
-  font-size: 23px;
-  font-style: normal;
 }
 
-.card__text_goloustnoe {
-  padding-top: 11px;
+#mapListv {
+  width: 110px;
+  top: 380px;
+  left: 343px;
+  transform: scale(1);
+  transition: all 0.5s ease;
 }
+@media (max-width: 1024px) {
+  #mapListv {
+    width: 90px;
+    top: 285px;
+    left: 29vw;
+  }
+}
+@media (max-width: 860px) {
+  #mapListv {
+    left: 25vw;
+  }
+}
+@media (max-width: 760px) {
+  #mapListv {
+    left: 21vw;
+  }
+}
+@media (max-width: 640px) {
+  #mapListv {
+    width: 75px;
+    top: 254px;
+    left: 20vw;
+  }
+}
+@media (max-width: 540px) {
+  #mapListv {
+    left: 25px;
+  }
+}
+@media (max-width: 480px) {
+  #mapListv {
+    width: 65px;
+    top: 221px;
+    left: 20px;
+  }
+}
+@media (max-width: 400px) {
+  #mapListv {
+    width: 55px;
+    top: 202px;
+    left: 7px;
+  }
+}
+
+#mapListv:hover {
+  transform: scale(1.3);
+  transition: all 0.5s ease;
+}
+
+#mapBG {
+  width: 110px;
+  top: 101px;
+  left: 822px;
+  transform: scale(1);
+  transition: all 0.5s ease;
+}
+@media (max-width: 1024px) {
+  #mapBG {
+    width: 90px;
+    top: 72px;
+    left: 69.4vw;
+  }
+}
+@media (max-width: 860px) {
+  #mapBG {
+    left: 73.4vw;
+  }
+}
+@media (max-width: 640px) {
+  #mapBG {
+    width: 75px;
+    top: 67px;
+    left: 78.4vw;
+  }
+}
+@media (max-width: 540px) {
+  #mapBG {
+    left: 380px;
+  }
+}
+@media (max-width: 480px) {
+  #mapBG {
+    width: 65px;
+    top: 57px;
+    left: 328px;
+  }
+}
+@media (max-width: 400px) {
+  #mapBG {
+    width: 55px;
+    top: 53px;
+    left: 264px;
+  }
+}
+
+#mapBG:hover {
+  transform: scale(1.3);
+  transition: all 0.5s ease;
+}
+
+.footer p {
+  text-align: center;
+}/*# sourceMappingURL=main.css.map */
